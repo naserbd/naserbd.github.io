@@ -27,7 +27,7 @@ header {
     background: #333;
     color: #fff;
     padding: 1rem 0;
-    text-align: left;
+    text-align: center;
 }
 
 /* Navigation */
@@ -122,9 +122,10 @@ nav {
     margin: auto;
     padding: 90px;
     color: #ffffff;
-    font-size: 52px;
+    font-size: 60px;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: #e1c158;
+    text-align: left;
 }
 
 .banner img{
