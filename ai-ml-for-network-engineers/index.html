@@ -25,27 +25,43 @@
 
   <aside class="side-bar-area">
     <div class="side-bar-area-content">
-      <img src="../images/ai-ml-card-2.png" alt="AI/ML Course" />
-
+      <a href="../ai-ml-for-network-engineers/index.html">
+        <img src="../images/ai-ml-card-2.png" alt="AI/ML Course" />
+      </a>
       <ul class="side-bar-menu" id="sidebarMenu">
         <li class="expandable expanded">
           <a href="#" class="section-title">AI/ML নিয়ে বেসিক কথা-বার্তা</a>
           <ul>
+            <!-- ✅ data-page is a friendly ID (no .md visible in HTML) -->
             <li>
-              <a href="#" data-md="01-al-ml.md">
+              <a href="#" data-page="ai-ml-01">
                 কেন Network Engineer-দের AI/ML বোঝা জরুরি?
               </a>
             </li>
+
             <!-- Optional extra page -->
-            <!-- <li><a href="#" data-md="test.md">Test Page</a></li> -->
+            <!-- <li><a href="#" data-page="ai-ml-02">Another page</a></li> -->
           </ul>
         </li>
       </ul>
     </div>
   </aside>
 
+  <!-- ✅ Default page content (index.html content) shows on first load -->
   <main class="tutorial-area" id="contentArea">
-    <h1>Loading...</h1>
+    <h1>Welcome 👋</h1>
+    <p>
+      This is the default content from <strong>index.html</strong>.
+      Select an article from the left menu to load it here.
+    </p>
+
+    <hr />
+
+    <h2>What you’ll find here</h2>
+    <p>
+      Networking, Automation, and Programmability — explained in a simple,
+      practical way.
+    </p>
   </main>
 
   <footer class="footer">
@@ -67,6 +83,17 @@
 
       const menu = document.getElementById("sidebarMenu");
       const content = document.getElementById("contentArea");
+
+      // ✅ Keep the initial HTML content to restore later if needed
+      const defaultHtml = content.innerHTML;
+
+      // ✅ Map friendly page IDs -> actual markdown files
+      // (This keeps .md hidden from your HTML menu)
+      const PAGES = {
+        "ai-ml-01": "01-al-ml.md"
+        // add more later:
+        // "ai-ml-02": "02-something.md"
+      };
 
       function clearActive() {
         menu.querySelectorAll("a.active").forEach(a => a.classList.remove("active"));
@@ -108,28 +135,29 @@
         const topExpandable = a.closest("li.expandable");
         const isSectionTitle = a.classList.contains("section-title");
 
+        // Toggle expand/collapse for section titles
         if (topExpandable && isSectionTitle) {
           e.preventDefault();
           topExpandable.classList.toggle("expanded");
           return;
         }
 
-        const mdPath = a.getAttribute("data-md");
-        if (mdPath) {
+        // Load markdown for menu items
+        const pageId = a.getAttribute("data-page");
+        if (pageId && PAGES[pageId]) {
           e.preventDefault();
-          loadMarkdown(mdPath, a);
+          loadMarkdown(PAGES[pageId], a);
           return;
         }
 
         e.preventDefault();
       });
 
-      const firstMdLink = menu.querySelector("a[data-md]");
-      if (firstMdLink) {
-        loadMarkdown(firstMdLink.getAttribute("data-md"), firstMdLink);
-      } else {
-        content.innerHTML = "<h2>No articles found</h2>";
-      }
+      // ✅ IMPORTANT:
+      // Do NOT auto-load any markdown on first load.
+      // The default HTML content in <main> stays visible.
+      // If you ever want a "Back to Home" button inside sidebar,
+      // we can restore defaultHtml with: content.innerHTML = defaultHtml;
     });
   </script>
 </body>
