@@ -34,11 +34,15 @@
           <ul>
             <!-- ✅ data-page is a friendly ID (no .md visible in HTML) -->
             <li>
-              <a href="#" data-page="ai-ml-01">
+              <a href="#" data-page="01-ai-ml">
                 কেন Network Engineer-দের AI/ML বোঝা জরুরি?
               </a>
             </li>
-
+            <li>
+              <a href="#" data-page="02-ai-ml">
+                মেশিন লার্নিং — একজন নেটওয়ার্ক ইঞ্জিনিয়ারের দৃষ্টিকোণ থেকে
+              </a>
+            </li>
             <!-- Optional extra page -->
             <!-- <li><a href="#" data-page="ai-ml-02">Another page</a></li> -->
           </ul>
@@ -90,9 +94,10 @@
       // ✅ Map friendly page IDs -> actual markdown files
       // (This keeps .md hidden from your HTML menu)
       const PAGES = {
-        "ai-ml-01": "01-al-ml.md"
+        "01-ai-ml": "01-al-ml.md",
+        "02-ai-ml": "02-al-ml.md"
         // add more later:
-        // "ai-ml-02": "02-something.md"
+        
       };
 
       function clearActive() {
