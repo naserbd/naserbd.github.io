@@ -8,6 +8,7 @@
   <link rel="shortcut icon" href="../images/title-logo.ico" />
   <link rel="stylesheet" href="../css/styles.css" type="text/css" />
   <link href="../css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
 </head>
 
@@ -32,7 +33,7 @@
         <li class="expandable expanded">
           <a href="#" class="section-title">AI/ML নিয়ে বেসিক কথা-বার্তা</a>
           <ul>
-            <!-- ✅ data-page is a friendly ID (no .md visible in HTML) -->
+            <!-- data-page is a friendly ID (no .md visible in HTML) -->
             <li>
               <a href="#" data-page="01-ai-ml">
                 কেন Network Engineer-দের AI/ML বোঝা জরুরি?
@@ -43,8 +44,22 @@
                 মেশিন লার্নিং — একজন নেটওয়ার্ক ইঞ্জিনিয়ারের দৃষ্টিকোণ থেকে
               </a>
             </li>
-            <!-- Optional extra page -->
-            <!-- <li><a href="#" data-page="ai-ml-02">Another page</a></li> -->
+          </ul>
+        </li>
+        <li class="expandable expanded">
+          <a href="#" class="section-title">মেশিন লার্নিং এর রকমফের</a>
+          <ul>
+            <!-- data-page is a friendly ID (no .md visible in HTML) -->
+            <li>
+              <a href="#" data-page="03-ai-ml">
+                সুপারভাইজড মেশিন লার্নিং 
+              </a>
+            </li>
+            <li>
+              <a href="#" data-page="04-ai-ml">
+                জেনারালাইজেশন, ওভারফিটিং, আন্ডারফিটিং 
+              </a>
+            </li>
           </ul>
         </li>
       </ul>
@@ -95,9 +110,9 @@
       // (This keeps .md hidden from your HTML menu)
       const PAGES = {
         "01-ai-ml": "01-al-ml.md",
-        "02-ai-ml": "02-al-ml.md"
-        // add more later:
-        
+        "02-ai-ml": "02-al-ml.md",
+        "03-ai-ml": "03-al-ml.md",
+        "04-ai-ml": "04-al-ml.md"        
       };
 
       function clearActive() {
