@@ -17,8 +17,8 @@
   <script>
     window.MathJax = {
       tex: {
-        inlineMath: [['\\(', '\\)']],
-        displayMath: [['$$', '$$']],
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
         processEscapes: true
       },
       options: {
@@ -181,21 +181,46 @@
             </li>
           </ul>
         </li>
-        <!-- <li class="expandable expanded">
-          <a href="#" class="section-title">মেশিন লার্নিং এর রকমফের</a>
+        <li class="expandable expanded">
+          <a href="#" class="section-title">Complex Numbers</a>
           <ul>
             <li>
-              <a href="#" data-page="03-ai-ml">
-                সুপারভাইজড মেশিন লার্নিং
+              <a href="#" data-page="day1_complex_numbers">
+                Complex Numbers Basics
               </a>
             </li>
             <li>
-              <a href="#" data-page="04-ai-ml">
-                জেনারালাইজেশন, ওভারফিটিং, আন্ডারফিটিং
+              <a href="#" data-page="day2_complex_numbers">
+                Combine Like with Like
+              </a>
+            </li>
+            <li>
+              <a href="#" data-page="day3_complex_numbers">
+                The magic of i² = −1
+              </a>
+            </li>
+            <li>
+              <a href="#" data-page="day4_complex_numbers">
+                Conjugates & Dividing Complex Numbers
+              </a>
+            </li>
+            <li>
+              <a href="#" data-page="day5_complex_numbers">
+                The Argand Diagram
+              </a>
+            </li>
+            <li>
+              <a href="#" data-page="day6_complex_numbers">
+                Polar Form & Euler's Formula
+              </a>
+            </li>
+            <li>
+              <a href="#" data-page="day7_complex_numbers">
+                De Moivre's Theorem
               </a>
             </li>
           </ul>
-        </li> -->
+        </li>
       </ul>
     </div>
   </aside>
@@ -244,7 +269,14 @@
         "day4_irrational_numbers"        : "real-numbers/day4_irrational_numbers.md",
         "day5_real_numbers"              : "real-numbers/day5_real_numbers.md",
         "day6_properties_real_numbers"   : "real-numbers/day6_properties_real_numbers.md",
-        "day7_review_and_assessment"     : "real-numbers/day7_review_and_assessment.md"
+        "day7_review_and_assessment"     : "real-numbers/day7_review_and_assessment.md",
+        "day1_complex_numbers"           : "complex-numbers/day1_complex_numbers.md",
+        "day2_complex_numbers"           : "complex-numbers/day2_complex_numbers.md",
+        "day3_complex_numbers"           : "complex-numbers/day3_complex_numbers.md",
+        "day4_complex_numbers"           : "complex-numbers/day4_complex_numbers.md",
+        "day5_complex_numbers"           : "complex-numbers/day5_complex_numbers.md",
+        "day6_complex_numbers"           : "complex-numbers/day6_complex_numbers.md",
+        "day7_complex_numbers"           : "complex-numbers/day7_complex_numbers.md",
       };
 
       function clearActive() {
@@ -273,8 +305,14 @@
       function renderMarkdownWithMath(md) {
         const mathBlocks = [];
 
-        // Extract display math  $$ ... $$  (handles multi-line)
+        // Extract display math  $$ ... $$  FIRST (must come before inline $)
         md = md.replace(/\$\$([\s\S]*?)\$\$/g, (match) => {
+          mathBlocks.push(match);
+          return `MATHPLACEHOLDER${mathBlocks.length - 1}ENDMATH`;
+        });
+
+        // Extract inline math  $...$  (single dollar, not preceded/followed by $)
+        md = md.replace(/\$([^\$\n]+?)\$/g, (match) => {
           mathBlocks.push(match);
           return `MATHPLACEHOLDER${mathBlocks.length - 1}ENDMATH`;
         });

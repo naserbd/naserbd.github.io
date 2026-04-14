@@ -66,7 +66,7 @@ Picture two circles, one inside the other.
 
 ```
  ┌─────────────────────────────┐
- │  𝕎  (Whole Numbers)         │
+ │  𝕎  (Whole Numbers)        │
  │                             │
  │   ┌─────────────────────┐   │
  │   │  ℕ  (Natural Nos.)  │   │
@@ -174,5 +174,4 @@ Try to include at least **one example that uses zero** — think about where zer
 ### Something to think about...
 
 > *What if a friend owes you money and they have none? They don't just have zero — they have less than zero. Is there a number for that?*
-
 
