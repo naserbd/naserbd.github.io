@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naser's Tech Blogs</title>
+
+  <link rel="shortcut icon" href="../images/title-logo.ico" />
+  <link rel="stylesheet" href="../css/styles.css" type="text/css" />
+  <link href="../css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Showdown: Markdown → HTML -->
+  <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+
+  <!-- MathJax config — must come BEFORE the MathJax script -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['$$', '$$']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      },
+      startup: {
+        typeset: false
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <style>
+    /* Fix Bootstrap resetting list styles inside the markdown content area */
+    #contentArea ul,
+    #contentArea ol {
+      padding-left: 2rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    #contentArea ul {
+      list-style-type: disc !important;
+    }
+
+    #contentArea ol {
+      list-style-type: decimal !important;
+    }
+
+    #contentArea ul li,
+    #contentArea ol li {
+      margin-bottom: 0.4rem;
+      line-height: 1.7;
+    }
+
+    /* Nested lists */
+    #contentArea ul ul,
+    #contentArea ol ol,
+    #contentArea ul ol,
+    #contentArea ol ul {
+      padding-left: 1.5rem;
+      margin-top: 0.3rem;
+      margin-bottom: 0.3rem;
+    }
+
+    /* Blockquotes */
+    #contentArea blockquote {
+      border-left: 4px solid #dee2e6;
+      padding: 0.5rem 1rem;
+      margin: 1rem 0;
+      color: #6c757d;
+    }
+
+    /* Inline code */
+    #contentArea code {
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+
+    /* Code blocks */
+    #contentArea pre {
+      background: #f4f4f4;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+
+    #contentArea pre code {
+      background: none;
+      padding: 0;
+    }
+
+    /* Tables */
+    #contentArea table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+
+    #contentArea table th,
+    #contentArea table td {
+      border: 1px solid #dee2e6;
+      padding: 0.5rem 0.75rem;
+      text-align: left;
+    }
+
+    #contentArea table th {
+      background: #f8f9fa;
+      font-weight: 600;
+    }
+
+    #contentArea table tr:nth-child(even) {
+      background: #f8f9fa;
+    }
+
+    /* Horizontal rule */
+    #contentArea hr {
+      margin: 2rem 0;
+      border-color: #dee2e6;
+    }
+  </style>
+</head>
+
+<body class="page-docs">
+  <nav>
+    <div class="nav-content">
+      <div class="nav-left">
+        <img class="nav-logo" src="../images/title-logo.ico" alt="mn-LAB Logo" />
+        <h1>Md Abdullah Al Naser's Tech Blogs</h1>
+      </div>
+      <a class="home-button" href="https://naserbd.github.io/">Home</a>
+    </div>
+  </nav>
+
+  <aside class="side-bar-area">
+    <div class="side-bar-area-content">
+      <a href="../mathematics/index.html">
+        <img src="../images/math-card-2.png" alt="AI/ML Course" />
+      </a>
+      <ul class="side-bar-menu" id="sidebarMenu">
+        <li class="expandable expanded">
+          <a href="#" class="section-title">Real Numbers</a>
+          <ul>
+            <li>
+              <a href="#" data-page="day1_natural_and_whole_numbers">
+                Natural and Whole Numbers
+              </a>
+            </li>
+            <li>
+              <a href="#" data-page="day2_integers">
+                Integers
+              </a>
+            </li>
+            <li>
+              <a href="#" data-page="day3_rational_numbers">
+                Rational Numbers
+              </a>
+            </li>
+            <li>
+              <a href="#" data-page="day4_irrational_numbers">
+                Irrational Numbers
+              </a>
+            </li>
+            <li>
+              <a href="#" data-page="day5_real_numbers">
+                Real Numbers
+              </a>
+            </li>
+            <li>
+              <a href="#" data-page="day6_properties_real_numbers">
+                Properties of Real Numbers
+              </a>
+            </li>
+            <li>
+              <a href="#" data-page="day7_review_and_assessment">
+                Review and Assessment
+              </a>
+            </li>
+          </ul>
+        </li>
+        <!-- <li class="expandable expanded">
+          <a href="#" class="section-title">মেশিন লার্নিং এর রকমফের</a>
+          <ul>
+            <li>
+              <a href="#" data-page="03-ai-ml">
+                সুপারভাইজড মেশিন লার্নিং
+              </a>
+            </li>
+            <li>
+              <a href="#" data-page="04-ai-ml">
+                জেনারালাইজেশন, ওভারফিটিং, আন্ডারফিটিং
+              </a>
+            </li>
+          </ul>
+        </li> -->
+      </ul>
+    </div>
+  </aside>
+
+  <main class="tutorial-area" id="contentArea">
+    <h1>Welcome 👋</h1>
+    <p>
+      This is the default content from <strong>index.html</strong>.
+      Select an article from the left menu to load it here.
+    </p>
+    <hr />
+    <h2>What you'll find here</h2>
+    <p>
+      Networking, Automation, and Programmability — explained in a simple,
+      practical way.
+    </p>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 Md Abdullah Al Naser's Tech Blogs</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (typeof showdown === "undefined") {
+        console.error("Showdown library is not loaded correctly.");
+        return;
+      }
+
+      const converter = new showdown.Converter({
+        tables: true,
+        strikethrough: true,
+        tasklists: true,
+        ghCodeBlocks: true,
+        smoothLivePreview: true,
+        simpleLineBreaks: false
+      });
+
+      const menu    = document.getElementById("sidebarMenu");
+      const content = document.getElementById("contentArea");
+
+      const PAGES = {
+        "day1_natural_and_whole_numbers" : "real-numbers/day1_natural_and_whole_numbers.md",
+        "day2_integers"                  : "real-numbers/day2_integers.md",
+        "day3_rational_numbers"          : "real-numbers/day3_rational_numbers.md",
+        "day4_irrational_numbers"        : "real-numbers/day4_irrational_numbers.md",
+        "day5_real_numbers"              : "real-numbers/day5_real_numbers.md",
+        "day6_properties_real_numbers"   : "real-numbers/day6_properties_real_numbers.md",
+        "day7_review_and_assessment"     : "real-numbers/day7_review_and_assessment.md"
+      };
+
+      function clearActive() {
+        menu.querySelectorAll("a.active").forEach(a => a.classList.remove("active"));
+      }
+
+      function setActiveLink(a) {
+        clearActive();
+        if (a) a.classList.add("active");
+      }
+
+      /*
+        MATH PROTECTION STRATEGY
+        ─────────────────────────
+        Showdown processes markdown before MathJax sees it.
+        It treats underscores inside $$ ... $$ as italic markers
+        and asterisks as bold — corrupting equations completely.
+
+        Solution:
+          1. Pull every math block OUT of the markdown string
+             and replace it with a safe placeholder.
+          2. Let Showdown convert the rest safely.
+          3. Put the math blocks back.
+          4. Call MathJax to typeset them.
+      */
+      function renderMarkdownWithMath(md) {
+        const mathBlocks = [];
+
+        // Extract display math  $$ ... $$  (handles multi-line)
+        md = md.replace(/\$\$([\s\S]*?)\$\$/g, (match) => {
+          mathBlocks.push(match);
+          return `MATHPLACEHOLDER${mathBlocks.length - 1}ENDMATH`;
+        });
+
+        // Extract inline math  \( ... \)
+        md = md.replace(/\\\([\s\S]*?\\\)/g, (match) => {
+          mathBlocks.push(match);
+          return `MATHPLACEHOLDER${mathBlocks.length - 1}ENDMATH`;
+        });
+
+        // Convert markdown → HTML (math is safely out of the way)
+        let html = converter.makeHtml(md);
+
+        // Restore all math blocks
+        html = html.replace(/MATHPLACEHOLDER(\d+)ENDMATH/g, (_, i) => {
+          return mathBlocks[parseInt(i)];
+        });
+
+        return html;
+      }
+
+      async function loadMarkdown(mdPath, activeLink) {
+        try {
+          console.log("Loading:", mdPath);
+
+          const res = await fetch(mdPath, { cache: "no-store" });
+          if (!res.ok) {
+            const txt = await res.text().catch(() => "");
+            throw new Error(`HTTP ${res.status} — ${txt.slice(0, 120)}`);
+          }
+
+          const md = await res.text();
+
+          // Render markdown with math blocks protected
+          content.innerHTML = renderMarkdownWithMath(md);
+
+          setActiveLink(activeLink);
+          content.scrollTop = 0;
+          window.scrollTo(0, 0);
+
+          // Ask MathJax to typeset only the content area
+          if (window.MathJax && window.MathJax.typesetPromise) {
+            await MathJax.typesetPromise([content]);
+          }
+
+        } catch (err) {
+          console.error("Markdown load error:", err);
+          content.innerHTML =
+            "<h2>Failed to load content</h2>" +
+            "<p>Open DevTools → Console for the exact error.</p>";
+        }
+      }
+
+      menu.addEventListener("click", (e) => {
+        const a = e.target.closest("a");
+        if (!a) return;
+
+        const topExpandable = a.closest("li.expandable");
+        const isSectionTitle = a.classList.contains("section-title");
+
+        // Toggle expand/collapse for section titles
+        if (topExpandable && isSectionTitle) {
+          e.preventDefault();
+          topExpandable.classList.toggle("expanded");
+          return;
+        }
+
+        // Load markdown page
+        const pageId = a.getAttribute("data-page");
+        if (pageId && PAGES[pageId]) {
+          e.preventDefault();
+          loadMarkdown(PAGES[pageId], a);
+          return;
+        }
+
+        e.preventDefault();
+      });
+    });
+  </script>
+</body>
+</html>
