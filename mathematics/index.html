@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Naser's Tech Blogs</title>
+  <title>Naser's Learning Notes</title>
 
   <link rel="shortcut icon" href="../images/title-logo.ico" />
   <link rel="stylesheet" href="../css/styles.css" type="text/css" />
   <link href="../css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600&display=swap" rel="stylesheet">
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
   <!-- Showdown: Markdown → HTML -->
   <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
 
@@ -129,7 +131,7 @@
     <div class="nav-content">
       <div class="nav-left">
         <img class="nav-logo" src="../images/title-logo.ico" alt="mn-LAB Logo" />
-        <h1>Md Abdullah Al Naser's Tech Blogs</h1>
+        <h1>Naser's Learning Notes</h1>
       </div>
       <a class="home-button" href="https://naserbd.github.io/">Home</a>
     </div>
@@ -141,7 +143,7 @@
         <img src="../images/math-card-2.png" alt="AI/ML Course" />
       </a>
       <ul class="side-bar-menu" id="sidebarMenu">
-        <li class="expandable expanded">
+        <li class="expandable">
           <a href="#" class="section-title">Real Numbers</a>
           <ul>
             <li>
@@ -181,7 +183,7 @@
             </li>
           </ul>
         </li>
-        <li class="expandable expanded">
+        <li class="expandable">
           <a href="#" class="section-title">Complex Numbers</a>
           <ul>
             <li>
@@ -221,6 +223,48 @@
             </li>
           </ul>
         </li>
+        <li class="expandable">
+          <a href="#" class="section-title">Set</a>
+          <ul>
+            <li>
+              <a href="#" data-page="day1_sets">
+                Set Basics
+              </a>
+            </li>
+            <li>
+              <a href="#" data-page="day2_sets">
+                Subsets & Power Sets
+              </a>
+            </li>
+            <li>
+              <a href="#" data-page="day3_sets">
+                Union & Intersection
+              </a>
+            </li>
+            <li>
+              <a href="#" data-page="day4_sets">
+                Complement & Set Difference
+              </a>
+            </li>
+            <li>
+              <a href="#" data-page="day5_sets">
+                Cardinality & Counting
+              </a>
+            </li>
+            <li>
+              <a href="#" data-page="day6_sets">
+                Cartesian Product & Relations
+              </a>
+            </li>
+            <li>
+              <a href="#" data-page="day7_sets">
+                Review, Proofs & Exam Prep
+              </a>
+            </li>
+          </ul>
+        </li>
+
+
       </ul>
     </div>
   </aside>
@@ -240,7 +284,7 @@
   </main>
 
   <footer class="footer">
-    <p>&copy; 2024 Md Abdullah Al Naser's Tech Blogs</p>
+    <p>&copy; 2026 - Naser's Learning Notes</p>
   </footer>
 
   <script>
@@ -277,6 +321,13 @@
         "day5_complex_numbers"           : "complex-numbers/day5_complex_numbers.md",
         "day6_complex_numbers"           : "complex-numbers/day6_complex_numbers.md",
         "day7_complex_numbers"           : "complex-numbers/day7_complex_numbers.md",
+        "day1_sets"                      : "sets/day1_sets.md",
+        "day2_sets"                      : "sets/day2_sets.md",
+        "day3_sets"                      : "sets/day3_sets.md",
+        "day4_sets"                      : "sets/day4_sets.md",
+        "day5_sets"                      : "sets/day5_sets.md",
+        "day6_sets"                      : "sets/day6_sets.md",
+        "day7_sets"                      : "sets/day7_sets.md",
       };
 
       function clearActive() {

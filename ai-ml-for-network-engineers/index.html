@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Naser's Tech Blogs</title>
+  <title>Naser's Learning Notes</title>
 
   <link rel="shortcut icon" href="../images/title-logo.ico" />
   <link rel="stylesheet" href="../css/styles.css" type="text/css" />
@@ -17,7 +17,7 @@
     <div class="nav-content">
       <div class="nav-left">
         <img class="nav-logo" src="../images/title-logo.ico" alt="mn-LAB Logo" />
-        <h1>Md Abdullah Al Naser's Tech Blogs</h1>
+        <h1>Naser's Learning Notes</h1>
       </div>
 
       <a class="home-button" href="https://naserbd.github.io/">Home</a>
@@ -30,7 +30,7 @@
         <img src="../images/ai-ml-card-2.png" alt="AI/ML Course" />
       </a>
       <ul class="side-bar-menu" id="sidebarMenu">
-        <li class="expandable expanded">
+        <li class="expandable">
           <a href="#" class="section-title">AI/ML নিয়ে বেসিক কথা-বার্তা</a>
           <ul>
             <!-- data-page is a friendly ID (no .md visible in HTML) -->
@@ -46,7 +46,7 @@
             </li>
           </ul>
         </li>
-        <li class="expandable expanded">
+        <li class="expandable">
           <a href="#" class="section-title">মেশিন লার্নিং এর রকমফের</a>
           <ul>
             <!-- data-page is a friendly ID (no .md visible in HTML) -->
@@ -66,7 +66,7 @@
     </div>
   </aside>
 
-  <!-- ✅ Default page content (index.html content) shows on first load -->
+  <!--Default page content (index.html content) shows on first load -->
   <main class="tutorial-area" id="contentArea">
     <h1>Welcome 👋</h1>
     <p>
@@ -84,7 +84,7 @@
   </main>
 
   <footer class="footer">
-    <p>&copy; 2024 Md Abdullah Al Naser's Tech Blogs</p>
+    <p>&copy; 2026 - Naser's Learning Notes</p>
   </footer>
 
   <script>
@@ -103,10 +103,10 @@
       const menu = document.getElementById("sidebarMenu");
       const content = document.getElementById("contentArea");
 
-      // ✅ Keep the initial HTML content to restore later if needed
+      // Keep the initial HTML content to restore later if needed
       const defaultHtml = content.innerHTML;
 
-      // ✅ Map friendly page IDs -> actual markdown files
+      // Map friendly page IDs -> actual markdown files
       // (This keeps .md hidden from your HTML menu)
       const PAGES = {
         "01-ai-ml": "01-al-ml.md",
@@ -173,7 +173,7 @@
         e.preventDefault();
       });
 
-      // ✅ IMPORTANT:
+      // IMPORTANT:
       // Do NOT auto-load any markdown on first load.
       // The default HTML content in <main> stays visible.
       // If you ever want a "Back to Home" button inside sidebar,
