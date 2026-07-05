@@ -31,7 +31,7 @@ The **cardinality** of a set A, written `|A|`, is the number of elements in A.
 | `B = {1, 2, 3, ..., 100}` | `\|B\| = 100` |
 | `C = ∅` | `\|C\| = 0` |
 | `D = {∅}` | `\|D\| = 1` (contains one element: the empty set) |
-| `E = {{1,2}, {3}, 4}` | `\|E\| = 3` (three elements: a set, a set, a number) |
+| `E = { {1,2}, {3}, 4}` | `\|E\| = 3` (three elements: a set, a set, a number) |
 
 ### Important note on nested sets
 
